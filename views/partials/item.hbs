@@ -1,0 +1,16 @@
+<div class='item'>
+  <h3>{{name}}</h3>
+  <img src={{img}} alt={{name}} />
+  {{#if isRented}}
+    <p class="rented-statement">You are currently renting this item</p>
+  {{else}}
+    <form action='/rental-catalogue/{{itemId}}' method='post' class="input-form">
+      <input
+        type='number'
+        placeholder='Minimum: {{minRental}} days'
+        name='numDays'
+      />
+      <button type='submit'>Rent</button>
+    </form>
+  {{/if}}
+</div>

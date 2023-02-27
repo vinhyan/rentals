@@ -1,0 +1,27 @@
+<main>
+  <h1 id="rent-title">Rental Catalogue</h1>
+  <div class="rental-container">
+    <div class="rental-feature-container">
+      <form action="/filter" method="post" class="filter-form">
+
+          <label for="filter-result">Filtered By:</label>
+          <select name="results">
+              <option value="default">Choose an option</option>
+              <option value="available-items">Available Items</option>
+              <option value="rented-items">Rented Items</option>
+          </select>
+
+        <button type="submit">Filter</button>
+      </form>
+      <form action="/return" method="post" class="return-form">
+          <button type="submit">Return all items</button>
+      </form>
+    </div>
+    <div class="items-container between">
+      {{#each items}}
+        {{>item}}
+      {{/each}}
+    </div>
+  </div>
+
+</main>

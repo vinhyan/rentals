@@ -1,0 +1,13 @@
+<main>
+  <h1>Welcome to Vinh's Store</h1>
+  <p>Now trending items:</p>
+  <div class="items-container center">
+    {{#each items}}
+      <div class="item">
+        <img src={{img}} alt={{name}} />
+        <p>{{name}}</p>
+      </div>
+    {{/each}}
+  </div>
+  <h2 class="all-items "><a class="all-items" href='/rental-catalogue'>See all items &#8594;</a></h2>
+</main>
